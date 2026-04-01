@@ -1,0 +1,7 @@
+services:
+  docs:
+    build: .
+    container_name: swixcode-docs
+    restart: unless-stopped
+    ports:
+      - "3300:80"

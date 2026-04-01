@@ -1,0 +1,17 @@
+{
+  "name": "swixcode-docs",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "AI 编程工具连接 New API 网关的配置指南",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": ["new-api", "claude-code", "codex-cli", "gemini-cli", "documentation"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}

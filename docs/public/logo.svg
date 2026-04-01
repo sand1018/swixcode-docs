@@ -1,0 +1,18 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景圆角矩形 -->
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+
+  <!-- N 字形路径 -->
+  <path d="M36 96V32L56 32L82 72V32H92V96H72L46 56V96H36Z" fill="white" fill-opacity="0.95"/>
+
+  <!-- 连接节点装饰 -->
+  <circle cx="100" cy="38" r="6" fill="#22d3ee" fill-opacity="0.8"/>
+  <circle cx="100" cy="58" r="4" fill="#a5b4fc" fill-opacity="0.6"/>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+  </defs>
+</svg>

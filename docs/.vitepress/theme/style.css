@@ -1,0 +1,93 @@
+/**
+ * New API Docs — 自定义主题样式
+ * 色彩体系基于 Indigo + Slate，现代科技感
+ */
+
+/* ===== 品牌色 ===== */
+:root {
+  /* 主色：Indigo */
+  --vp-c-brand-1: #6366f1;
+  --vp-c-brand-2: #818cf8;
+  --vp-c-brand-3: #4f46e5;
+  --vp-c-brand-soft: rgba(99, 102, 241, 0.14);
+
+  /* 提示框颜色 */
+  --vp-c-tip-1: var(--vp-c-brand-1);
+  --vp-c-tip-2: var(--vp-c-brand-2);
+  --vp-c-tip-3: var(--vp-c-brand-3);
+  --vp-c-tip-soft: var(--vp-c-brand-soft);
+
+  /* 首页 Hero 渐变 */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    #6366f1 30%,
+    #06b6d4
+  );
+
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #6366f1 50%,
+    #06b6d4 50%
+  );
+  --vp-home-hero-image-filter: blur(44px);
+}
+
+/* ===== 暗色模式覆盖 ===== */
+.dark {
+  --vp-c-brand-1: #818cf8;
+  --vp-c-brand-2: #a5b4fc;
+  --vp-c-brand-3: #6366f1;
+  --vp-c-brand-soft: rgba(129, 140, 248, 0.14);
+
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #818cf8 50%,
+    #22d3ee 50%
+  );
+}
+
+/* ===== 全局排版优化 ===== */
+:root {
+  --vp-font-family-base: 'Inter', 'PingFang SC', 'Microsoft YaHei',
+    -apple-system, BlinkMacSystemFont, sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', 'Fira Code', 'Menlo', monospace;
+}
+
+/* ===== 自定义容器样式增强 ===== */
+.custom-block.tip {
+  border-color: var(--vp-c-brand-1);
+}
+
+.custom-block.warning {
+  border-color: #f59e0b;
+}
+
+.custom-block.danger {
+  border-color: #ef4444;
+}
+
+/* ===== 代码块增强 ===== */
+.vp-doc div[class*='language-'] {
+  border-radius: 8px;
+}
+
+/* ===== 首页 Feature 卡片动效 ===== */
+.VPFeature {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.VPFeature:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.dark .VPFeature:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== 侧边栏当前项高亮 ===== */
+.VPSidebarItem.is-active > .item > .link > .text {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
