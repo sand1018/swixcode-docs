@@ -1,6 +1,6 @@
 # Gemini CLI
 
-[Gemini CLI](https://github.com/google-gemini/gemini-cli) 是 Google 推出的终端 AI 编程助手。本文介绍如何配置它通过 New API 网关进行请求。
+[Gemini CLI](https://github.com/google-gemini/gemini-cli) 是 Google 推出的终端 AI 编程助手。本文介绍如何配置它通过 SwixCode 网关进行请求。
 
 ## 配置方式
 
@@ -10,19 +10,19 @@
 
 ```bash [macOS (Zsh)]
 export GEMINI_API_BASE_URL="https://www.swixcode.com"
-export GEMINI_API_KEY="sk-你的NewAPI令牌"
+export GEMINI_API_KEY="sk-你的SwixCode令牌"
 gemini
 ```
 
 ```bash [Linux (Bash)]
 export GEMINI_API_BASE_URL="https://www.swixcode.com"
-export GEMINI_API_KEY="sk-你的NewAPI令牌"
+export GEMINI_API_KEY="sk-你的SwixCode令牌"
 gemini
 ```
 
 ```powershell [Windows (PowerShell)]
 $env:GEMINI_API_BASE_URL = "https://www.swixcode.com"
-$env:GEMINI_API_KEY = "sk-你的NewAPI令牌"
+$env:GEMINI_API_KEY = "sk-你的SwixCode令牌"
 gemini
 ```
 
@@ -34,19 +34,19 @@ gemini
 
 ```bash [macOS (Zsh)]
 echo 'export GEMINI_API_BASE_URL="https://www.swixcode.com"' >> ~/.zshrc
-echo 'export GEMINI_API_KEY="sk-你的NewAPI令牌"' >> ~/.zshrc
+echo 'export GEMINI_API_KEY="sk-你的SwixCode令牌"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
 ```bash [Linux (Bash)]
 echo 'export GEMINI_API_BASE_URL="https://www.swixcode.com"' >> ~/.bashrc
-echo 'export GEMINI_API_KEY="sk-你的NewAPI令牌"' >> ~/.bashrc
+echo 'export GEMINI_API_KEY="sk-你的SwixCode令牌"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
 ```powershell [Windows (PowerShell)]
 [System.Environment]::SetEnvironmentVariable('GEMINI_API_BASE_URL', 'https://www.swixcode.com', 'User')
-[System.Environment]::SetEnvironmentVariable('GEMINI_API_KEY', 'sk-你的NewAPI令牌', 'User')
+[System.Environment]::SetEnvironmentVariable('GEMINI_API_KEY', 'sk-你的SwixCode令牌', 'User')
 # 重新打开终端生效
 ```
 
@@ -59,14 +59,14 @@ source ~/.bashrc
 ```json [macOS / Linux (~/.gemini/settings.json)]
 {
   "apiBaseUrl": "https://www.swixcode.com",
-  "apiKey": "sk-你的NewAPI令牌"
+  "apiKey": "sk-你的SwixCode令牌"
 }
 ```
 
 ```json [Windows (%USERPROFILE%\.gemini\settings.json)]
 {
   "apiBaseUrl": "https://www.swixcode.com",
-  "apiKey": "sk-你的NewAPI令牌"
+  "apiKey": "sk-你的SwixCode令牌"
 }
 ```
 
@@ -94,13 +94,13 @@ gemini "说 hello"
 
 ### API 协议转换
 
-Gemini CLI 使用 **Google Gemini 原生协议**（`/v1beta/models/...`）。如果你的 New API 不支持 Gemini 协议直通，有两种解决方案：
+Gemini CLI 使用 **Google Gemini 原生协议**（`/v1beta/models/...`）。如果你的 SwixCode 不支持 Gemini 协议直通，有两种解决方案：
 
-1. **在 New API 中添加 Gemini 格式渠道**（如果支持）
+1. **在 SwixCode 中添加 Gemini 格式渠道**（如果支持）
 2. **通过 OpenAI 兼容模式**：某些版本的 Gemini CLI 支持通过 OpenAI 兼容端点调用
 
 ::: tip
-请在 New API 后台确认你的渠道配置支持 Gemini 协议。如果只支持 OpenAI 格式，考虑使用 [Claude Code Router](/advanced/router) 进行协议转换。
+请在 SwixCode 后台确认你的渠道配置支持 Gemini 协议。如果只支持 OpenAI 格式，考虑使用 [Claude Code Router](/advanced/router) 进行协议转换。
 :::
 
 ## 常见问题
@@ -108,5 +108,5 @@ Gemini CLI 使用 **Google Gemini 原生协议**（`/v1beta/models/...`）。如
 | 问题 | 原因 | 解决方案 |
 |---|---|---|
 | `401 Unauthorized` | API Key 错误 | 检查令牌和环境变量 |
-| `Model not supported` | 协议不兼容 | 检查 New API 渠道是否支持 Gemini 格式 |
+| `Model not supported` | 协议不兼容 | 检查 SwixCode 渠道是否支持 Gemini 格式 |
 | 无响应 | 网络问题 | 检查 Base URL 是否可访问 |

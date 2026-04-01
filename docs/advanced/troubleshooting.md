@@ -4,12 +4,12 @@
 
 ## 通用排查流程
 
-### 第一步：确认 New API 可达
+### 第一步：确认 SwixCode 可达
 
 ```bash
 # 测试网络连通性
 curl -s https://www.swixcode.com/v1/models \
-  -H "Authorization: Bearer sk-你的NewAPI令牌" | head -20
+  -H "Authorization: Bearer sk-你的SwixCode令牌" | head -20
 ```
 
 **预期结果**：返回 JSON 格式的模型列表。
@@ -17,14 +17,14 @@ curl -s https://www.swixcode.com/v1/models \
 如果失败：
 - 检查 URL 是否正确
 - 检查网络连接（是否需要代理/VPN）
-- 确认 New API 服务是否正在运行
+- 确认 SwixCode 服务是否正在运行
 
 ### 第二步：确认令牌有效
 
 ```bash
 # 发送一个简单请求
 curl -s https://www.swixcode.com/v1/chat/completions \
-  -H "Authorization: Bearer sk-你的NewAPI令牌" \
+  -H "Authorization: Bearer sk-你的SwixCode令牌" \
   -H "Content-Type: application/json" \
   -d '{
     "model": "gpt-5.4-mini",
@@ -41,7 +41,7 @@ curl -s https://www.swixcode.com/v1/chat/completions \
 # 检查环境变量
 echo $ANTHROPIC_BASE_URL
 echo $ANTHROPIC_API_KEY
-echo $NEW_API_KEY
+echo $SWIXCODE_API_KEY
 echo $GEMINI_API_BASE_URL
 ```
 
@@ -95,8 +95,8 @@ cat ~/.codex/config.toml
 | `403` | 权限不足 | 检查令牌的模型访问范围 |
 | `404` | 端点不存在 | 检查 Base URL 格式（有无 `/v1`） |
 | `429` | 请求频率超限 | 等待或联系管理员调整限额 |
-| `500` | 服务端错误 | 检查 New API 服务状态 |
-| `502/503` | 上游不可用 | New API 连接的上游 AI 服务商可能宕机 |
+| `500` | 服务端错误 | 检查 SwixCode 服务状态 |
+| `502/503` | 上游不可用 | SwixCode 连接的上游 AI 服务商可能宕机 |
 
 ## 仍然无法解决？
 

@@ -1,6 +1,6 @@
 # 安全最佳实践
 
-在使用 New API 网关时，请遵循以下安全建议。
+在使用 SwixCode 网关时，请遵循以下安全建议。
 
 ## API Key 管理
 
@@ -55,7 +55,7 @@ sk-codex-xxx         → Codex CLI 专用
 
 ## HTTPS
 
-- ✅ 始终使用 HTTPS 连接 New API
+- ✅ 始终使用 HTTPS 连接 SwixCode
 - ❌ 避免在生产环境使用 HTTP
 
 ```bash
@@ -68,7 +68,7 @@ export ANTHROPIC_BASE_URL="http://www.swixcode.com"
 
 ## 最小权限原则
 
-在 New API 后台创建令牌时：
+在 SwixCode 后台创建令牌时：
 
 - 只授权**需要的模型**，不要勾选全部
 - 设置合理的**额度上限**

@@ -4,8 +4,8 @@
 
 ## 前提条件
 
-- ✅ 你已有一个可用的 New API 服务地址（`https://www.swixcode.com`）
-- ✅ 你已有一个 New API 的 **令牌（Token）**
+- ✅ 你已有一个可用的 SwixCode 服务地址（`https://www.swixcode.com`）
+- ✅ 你已有一个 SwixCode 的 **令牌（Token）**
 
 ::: tip 还没有令牌？
 查看 [获取令牌](/guide/get-token) 了解如何创建。
@@ -15,8 +15,8 @@
 
 | 信息 | 值 | 说明 |
 |---|---|---|
-| **Base URL** | `https://www.swixcode.com` | New API 服务地址 |
-| **API Key** | `sk-xxxxxxxxxxxxxxxx` | 你在 New API 中创建的令牌 |
+| **Base URL** | `https://www.swixcode.com` | SwixCode 服务地址 |
+| **API Key** | `sk-xxxxxxxxxxxxxxxx` | 你在 SwixCode 中创建的令牌 |
 
 ## 选择你的工具
 

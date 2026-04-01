@@ -1,6 +1,6 @@
 # SwixCode Docs
 
-AI 编程工具连接 New API 网关的配置指南。
+AI 编程工具连接 SwixCode 网关的配置指南。
 
 ## 文档内容
 

@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   // ===== 站点元数据 =====
   title: 'SwixCode Docs',
-  description: 'AI 编程工具连接 New API 网关的配置指南 — Claude Code、Codex CLI、Gemini CLI 等',
+  description: 'AI 编程工具连接 SwixCode 网关的配置指南 — Claude Code、Codex CLI、Gemini CLI 等',
   lang: 'zh-CN',
 
   // ===== 构建配置 =====
@@ -12,7 +12,7 @@ export default defineConfig({
   lastUpdated: true,
 
   // 如果部署到 GitHub Pages 子路径，取消注释并设置 base
-  // base: '/new-api-docs/',
+  // base: '/swixcode-docs/',
 
   // ===== HTML Head =====
   head: [
@@ -20,7 +20,7 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#6366f1' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'SwixCode Docs' }],
-    ['meta', { property: 'og:description', content: 'AI 编程工具连接 New API 网关的配置指南' }],
+    ['meta', { property: 'og:description', content: 'AI 编程工具连接 SwixCode 网关的配置指南' }],
   ],
 
   // ===== Markdown 配置 =====
@@ -75,7 +75,7 @@ export default defineConfig({
             text: '入门',
             collapsed: false,
             items: [
-              { text: '什么是 New API', link: 'what-is-newapi' },
+              { text: '什么是 SwixCode', link: 'what-is-swixcode' },
               { text: '快速开始', link: 'getting-started' },
               { text: '获取令牌', link: 'get-token' },
             ],

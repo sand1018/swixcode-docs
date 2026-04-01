@@ -4,10 +4,10 @@
 
 ## 什么是 CCR
 
-CCR 是一个本地代理服务，作为 Claude Code 和 New API 之间的 **中间层**：
+CCR 是一个本地代理服务，作为 Claude Code 和 SwixCode 之间的 **中间层**：
 
 ```
-Claude Code  →  CCR (本地:3456)  →  New API  →  AI 服务商
+Claude Code  →  CCR (本地:3456)  →  SwixCode  →  AI 服务商
 ```
 
 它解决了以下痛点：
@@ -38,7 +38,7 @@ npm install -g @musistudio/claude-code-router
     {
       "name": "newapi",
       "api_base_url": "https://www.swixcode.com/v1",
-      "api_key": "sk-你的NewAPI令牌",
+      "api_key": "sk-你的SwixCode令牌",
       "models": [
         "claude-sonnet-4.6",
         "claude-haiku-4.6",
@@ -61,8 +61,8 @@ npm install -g @musistudio/claude-code-router
 | 字段 | 说明 |
 |---|---|
 | `APIKEY` | CCR 本地访问密钥（自定义，用于 Claude Code 连接 CCR） |
-| `Providers[].api_base_url` | New API 地址（需要 `/v1`） |
-| `Providers[].api_key` | New API 令牌 |
+| `Providers[].api_base_url` | SwixCode 地址（需要 `/v1`） |
+| `Providers[].api_key` | SwixCode 令牌 |
 | `Providers[].models` | 此 Provider 支持的模型列表 |
 | `Providers[].transformer` | 协议转换器（`openai` = 转为 OpenAI 格式） |
 | `Router.default` | 默认使用的 Provider 名称 |

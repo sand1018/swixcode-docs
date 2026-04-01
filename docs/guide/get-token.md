@@ -1,10 +1,10 @@
 # 获取令牌
 
-在配置任何 AI 编程工具之前，你需要从 New API 获取一个 **API 令牌（Token）**。
+在配置任何 AI 编程工具之前，你需要从 SwixCode 获取一个 **API 令牌（Token）**。
 
 ## 步骤
 
-### 1. 登录 New API 管理后台
+### 1. 登录 SwixCode 管理后台
 
 在浏览器中访问：
 
@@ -39,7 +39,7 @@ https://www.swixcode.com
 
 ## 令牌格式
 
-New API 生成的令牌通常以 `sk-` 开头：
+SwixCode 生成的令牌通常以 `sk-` 开头：
 
 ```
 sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

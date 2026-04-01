@@ -1,6 +1,6 @@
 # Claude Code
 
-[Claude Code](https://docs.anthropic.com/en/docs/claude-code) 是 Anthropic 推出的终端 AI 编程助手。本文介绍如何将其配置为使用 New API 转发请求。
+[Claude Code](https://docs.anthropic.com/en/docs/claude-code) 是 Anthropic 推出的终端 AI 编程助手。本文介绍如何将其配置为使用 SwixCode 转发请求。
 
 ## 配置方式
 
@@ -10,27 +10,27 @@ Claude Code 支持两种配置方式：**环境变量** 和 **settings.json**。
 
 ::: code-group
 
-```bash [macOS]
+```bash
 export ANTHROPIC_BASE_URL="https://www.swixcode.com"
-export ANTHROPIC_API_KEY="sk-你的NewAPI令牌"
+export ANTHROPIC_API_KEY="sk-你的SwixCode令牌"
 claude
 ```
 
-```bash [Linux]
+```bash
 export ANTHROPIC_BASE_URL="https://www.swixcode.com"
-export ANTHROPIC_API_KEY="sk-你的NewAPI令牌"
+export ANTHROPIC_API_KEY="sk-你的SwixCode令牌"
 claude
 ```
 
-```powershell [Windows (PowerShell)]
+```powershell
 $env:ANTHROPIC_BASE_URL = "https://www.swixcode.com"
-$env:ANTHROPIC_API_KEY = "sk-你的NewAPI令牌"
+$env:ANTHROPIC_API_KEY = "sk-你的SwixCode令牌"
 claude
 ```
 
-```cmd [Windows (CMD)]
+```cmd
 set ANTHROPIC_BASE_URL=https://www.swixcode.com
-set ANTHROPIC_API_KEY=sk-你的NewAPI令牌
+set ANTHROPIC_API_KEY=sk-你的SwixCode令牌
 claude
 ```
 
@@ -41,22 +41,22 @@ claude
 
 ::: code-group
 
-```bash [macOS (Zsh)]
+```bash
 echo 'export ANTHROPIC_BASE_URL="https://www.swixcode.com"' >> ~/.zshrc
-echo 'export ANTHROPIC_API_KEY="sk-你的NewAPI令牌"' >> ~/.zshrc
+echo 'export ANTHROPIC_API_KEY="sk-你的SwixCode令牌"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
-```bash [Linux (Bash)]
+```bash
 echo 'export ANTHROPIC_BASE_URL="https://www.swixcode.com"' >> ~/.bashrc
-echo 'export ANTHROPIC_API_KEY="sk-你的NewAPI令牌"' >> ~/.bashrc
+echo 'export ANTHROPIC_API_KEY="sk-你的SwixCode令牌"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-```powershell [Windows (PowerShell)]
+```powershell
 # 写入用户级环境变量（永久生效）
 [System.Environment]::SetEnvironmentVariable('ANTHROPIC_BASE_URL', 'https://www.swixcode.com', 'User')
-[System.Environment]::SetEnvironmentVariable('ANTHROPIC_API_KEY', 'sk-你的NewAPI令牌', 'User')
+[System.Environment]::SetEnvironmentVariable('ANTHROPIC_API_KEY', 'sk-你的SwixCode令牌', 'User')
 # 重新打开终端生效
 ```
 
@@ -70,20 +70,20 @@ Claude Code 支持通过 JSON 配置文件设置环境变量。
 
 ::: code-group
 
-```json [macOS / Linux (~/.claude/settings.json)]
+```json
 {
   "env": {
     "ANTHROPIC_BASE_URL": "https://www.swixcode.com",
-    "ANTHROPIC_API_KEY": "sk-你的NewAPI令牌"
+    "ANTHROPIC_API_KEY": "sk-你的SwixCode令牌"
   }
 }
 ```
 
-```json [Windows (%USERPROFILE%\.claude\settings.json)]
+```json
 {
   "env": {
     "ANTHROPIC_BASE_URL": "https://www.swixcode.com",
-    "ANTHROPIC_API_KEY": "sk-你的NewAPI令牌"
+    "ANTHROPIC_API_KEY": "sk-你的SwixCode令牌"
   }
 }
 ```
@@ -98,7 +98,7 @@ Claude Code 支持通过 JSON 配置文件设置环境变量。
 {
   "env": {
     "ANTHROPIC_BASE_URL": "https://www.swixcode.com",
-    "ANTHROPIC_API_KEY": "sk-你的NewAPI令牌"
+    "ANTHROPIC_API_KEY": "sk-你的SwixCode令牌"
   }
 }
 ```
@@ -109,6 +109,7 @@ Claude Code 支持通过 JSON 配置文件设置环境变量。
 ```
 .claude/settings.json
 ```
+
 :::
 
 ## 注意事项
@@ -117,7 +118,7 @@ Claude Code 支持通过 JSON 配置文件设置环境变量。
 
 Claude Code 使用 **Anthropic 原生协议**（`/v1/messages`），而非 OpenAI 格式。
 
-New API 同时支持 Anthropic 和 OpenAI 格式，通常 **无需额外配置**。如果遇到问题，请确认你的 New API 渠道中已正确添加了 Anthropic 格式的渠道。
+SwixCode 同时支持 Anthropic 和 OpenAI 格式，通常 **无需额外配置**。如果遇到问题，请确认你的 SwixCode 渠道中已正确添加了 Anthropic 格式的渠道。
 
 ### Tool Search 功能
 
@@ -127,11 +128,11 @@ New API 同时支持 Anthropic 和 OpenAI 格式，通常 **无需额外配置**
 
 ::: code-group
 
-```bash [macOS / Linux]
+```bash
 export ENABLE_TOOL_SEARCH=true
 ```
 
-```powershell [Windows (PowerShell)]
+```powershell
 $env:ENABLE_TOOL_SEARCH = "true"
 ```
 
@@ -139,15 +140,15 @@ $env:ENABLE_TOOL_SEARCH = "true"
 
 ### 自定义请求头
 
-如果你的 New API 网关需要额外的认证头：
+如果你的 SwixCode 网关需要额外的认证头：
 
 ::: code-group
 
-```bash [macOS / Linux]
+```bash
 export ANTHROPIC_CUSTOM_HEADERS="X-Custom-Header: value"
 ```
 
-```powershell [Windows (PowerShell)]
+```powershell
 $env:ANTHROPIC_CUSTOM_HEADERS = "X-Custom-Header: value"
 ```
 
@@ -162,14 +163,55 @@ claude "说 hello"
 
 如果返回了正常回复，说明配置成功 🎉
 
+## VSCode 扩展强制登录解决方案
+
+如果 Claude Code 的 VSCode 扩展要求强制登录，可以通过以下方式解决：
+
+### 1. 创建配置文件
+
+在 `~/.claude/` 目录下创建 `config.json` 文件：
+
+::: code-group
+
+```bash
+mkdir -p ~/.claude
+touch ~/.claude/config.json
+```
+
+```powershell
+New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.claude"
+New-Item -ItemType File -Force -Path "$env:USERPROFILE\.claude\config.json"
+```
+
+:::
+
+### 2. 添加配置内容
+
+编辑 `config.json`，写入以下内容：
+
+```json
+{
+  "primaryApiKey": "swixcode"
+}
+```
+
+### 3. 重启 VSCode
+
+重启 VSCode 使配置生效。重启后扩展将不再要求登录，直接使用 SwixCode 提供的 API。
+
+::: warning 注意
+此方法同时需要配合 `ANTHROPIC_BASE_URL` 环境变量使用，确保请求发送到 SwixCode 而非 Anthropic 官方服务器。
+:::
+
 ## 常见问题
 
-| 问题 | 原因 | 解决方案 |
-|---|---|---|
-| `401 Unauthorized` | API Key 错误 | 检查令牌是否正确复制 |
-| `404 Not Found` | Base URL 错误 | 确认地址末尾不要加 `/v1` |
-| `Connection refused` | 网络不通 | 检查 New API 服务是否在线 |
-| 模型不可用 | 令牌权限不足 | 在 New API 后台检查令牌的模型范围 |
+| 问题                   | 原因                   | 解决方案                                                         |
+| ---------------------- | ---------------------- | ---------------------------------------------------------------- |
+| `401 Unauthorized`   | API Key 错误           | 检查令牌是否正确复制                                             |
+| `404 Not Found`      | Base URL 错误          | 确认地址末尾不要加 `/v1`                                       |
+| `Connection refused` | 网络不通               | 检查 SwixCode 服务是否在线                                       |
+| 模型不可用             | 令牌权限不足           | 在 SwixCode 后台检查令牌的模型范围                               |
+| VSCode 扩展要求登录    | 未配置 `config.json` | 参考上方[VSCode 扩展强制登录解决方案](#vscode-扩展强制登录解决方案) |
 
 ## 进阶
 

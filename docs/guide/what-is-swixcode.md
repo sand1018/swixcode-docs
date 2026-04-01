@@ -1,6 +1,6 @@
-# 什么是 New API
+# 什么是 SwixCode
 
-**New API** 是一个开源的 AI 模型统一网关平台，能将不同厂商的 AI API（OpenAI、Anthropic Claude、Google Gemini、DeepSeek、Midjourney 等）标准化为 **统一的 OpenAI 兼容接口**。
+**SwixCode** 是一个开源的 AI 模型统一网关平台，能将不同厂商的 AI API（OpenAI、Anthropic Claude、Google Gemini、DeepSeek、Midjourney 等）标准化为 **统一的 OpenAI 兼容接口**。
 
 ## 核心能力
 
@@ -15,9 +15,9 @@
 
 ## 本文档的目标
 
-本文档 **不是** New API 的部署运维文档。
+本文档 **不是** SwixCode 的部署运维文档。
 
-本文档聚焦于：**如何将各种 AI 编程工具（CLI / IDE）配置为使用 New API 作为 API 网关**。
+本文档聚焦于：**如何将各种 AI 编程工具（CLI / IDE）配置为使用 SwixCode 作为 API 网关**。
 
 适用工具：
 
@@ -29,7 +29,7 @@
 ```
 ┌─────────────┐     ┌─────────────┐     ┌──────────────────┐
 │ Claude Code │     │             │     │   OpenAI API     │
-│ Codex CLI   │────▶│   New API   │────▶│   Anthropic API  │
+│ Codex CLI   │────▶│   SwixCode   │────▶│   Anthropic API  │
 │ Gemini CLI  │     │   (网关)     │     │   Gemini API     │
 │ Cursor      │     │             │     │   DeepSeek API   │
 │ Cline       │     │             │     │   ...            │
@@ -37,10 +37,10 @@
     你的工具            统一入口             实际 AI 服务商
 ```
 
-所有工具的请求都通过 New API 统一转发，你只需要：
+所有工具的请求都通过 SwixCode 统一转发，你只需要：
 
-1. 一个 New API 地址（Base URL）
-2. 一个 New API 令牌（API Key）
+1. 一个 SwixCode 地址（Base URL）
+2. 一个 SwixCode 令牌（API Key）
 
 ## 下一步
 
