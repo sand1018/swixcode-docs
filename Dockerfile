@@ -1,6 +1,9 @@
 # ===== 阶段 1：构建 =====
 FROM node:20-alpine AS builder
 
+# VitePress lastUpdated 需要 git
+RUN apk add --no-cache git
+
 WORKDIR /app
 
 # 先复制依赖文件，利用 Docker 缓存
@@ -8,6 +11,7 @@ COPY package.json package-lock.json ./
 RUN npm ci
 
 # 复制源文件并构建
+COPY .git .git
 COPY docs/ docs/
 RUN npm run docs:build
 
