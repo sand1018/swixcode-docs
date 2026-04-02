@@ -36,6 +36,11 @@ features:
     details: 在 VS Code 的 Cline 扩展中选择 OpenAI Compatible 接入 SwixCode
     link: /tools/cline
     linkText: 查看配置 →
+  - icon: 💬
+    title: 桌面客户端
+    details: ChatBox、Cherry Studio、NextChat、LobeChat 等桌面 AI 聊天客户端的 SwixCode 接入配置
+    link: /tools/chatbox
+    linkText: 查看配置 →
   - icon: 🔀
     title: Claude Code Router
     details: 使用 CCR 作为中间层，智能路由多模型请求并自动处理协议转换

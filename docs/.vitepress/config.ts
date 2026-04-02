@@ -53,13 +53,32 @@ export default defineConfig({
     nav: [
       { text: '快速开始', link: '/guide/getting-started', activeMatch: '/guide/' },
       {
-        text: 'CLI 工具',
+        text: 'AI 工具',
         items: [
-          { text: 'Claude Code', link: '/tools/claude-code' },
-          { text: 'Codex CLI', link: '/tools/codex-cli' },
-          { text: 'Gemini CLI', link: '/tools/gemini-cli' },
-          { text: 'Cursor', link: '/tools/cursor' },
-          { text: 'Cline', link: '/tools/cline' },
+          {
+            text: '终端 CLI',
+            items: [
+              { text: 'Claude Code', link: '/tools/claude-code' },
+              { text: 'Codex CLI', link: '/tools/codex-cli' },
+              { text: 'Gemini CLI', link: '/tools/gemini-cli' },
+            ],
+          },
+          {
+            text: 'IDE 集成',
+            items: [
+              { text: 'Cursor', link: '/tools/cursor' },
+              { text: 'Cline', link: '/tools/cline' },
+            ],
+          },
+          {
+            text: '桌面客户端',
+            items: [
+              { text: 'ChatBox', link: '/tools/chatbox' },
+              { text: 'Cherry Studio', link: '/tools/cherry-studio' },
+              { text: 'NextChat', link: '/tools/nextchat' },
+              { text: 'LobeChat', link: '/tools/lobechat' },
+            ],
+          },
         ],
       },
       { text: '进阶', link: '/advanced/router', activeMatch: '/advanced/' },
@@ -100,6 +119,16 @@ export default defineConfig({
             items: [
               { text: 'Cursor', link: 'cursor' },
               { text: 'Cline (VS Code)', link: 'cline' },
+            ],
+          },
+          {
+            text: '桌面客户端',
+            collapsed: false,
+            items: [
+              { text: 'ChatBox', link: 'chatbox' },
+              { text: 'Cherry Studio', link: 'cherry-studio' },
+              { text: 'NextChat', link: 'nextchat' },
+              { text: 'LobeChat', link: 'lobechat' },
             ],
           },
         ],

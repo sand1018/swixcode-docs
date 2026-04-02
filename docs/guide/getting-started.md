@@ -39,27 +39,18 @@
 | **Cursor** | Settings → Models → Override OpenAI Base URL | [完整指南 →](/tools/cursor) |
 | **Cline** | 选择 OpenAI Compatible → 填入 Base URL | [完整指南 →](/tools/cline) |
 
+### 桌面客户端
+
+| 工具 | 配置方式 | 详细教程 |
+|---|---|---|
+| **ChatBox** | 添加自定义提供商 → OpenAI API Compatible | [完整指南 →](/tools/chatbox) |
+| **Cherry Studio** | 模型服务 → 添加 OpenAI 类型提供商 | [完整指南 →](/tools/cherry-studio) |
+| **NextChat** | 设置 → 自定义接口 → 填入 Base URL | [完整指南 →](/tools/nextchat) |
+| **LobeChat** | 设置 → AI 服务商 → 填入 API 代理地址 | [完整指南 →](/tools/lobechat) |
+
 ## 验证配置
 
-配置完成后，运行一条简单命令验证连接：
-
-::: code-group
-
-```bash [Claude Code]
-claude "说 hello"
-```
-
-```bash [Codex CLI]
-codex "说 hello"
-```
-
-```bash [Gemini CLI]
-gemini "说 hello"
-```
-
-:::
-
-如果返回了正常的 AI 回复，🎉 恭喜你配置成功！
+每个工具的详细教程中都包含了验证步骤。完成配置后，请参照对应工具页面的 **「验证」** 部分确认连接是否成功。
 
 ## 遇到问题？
 
