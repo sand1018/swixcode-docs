@@ -13,7 +13,7 @@ RUN npm ci
 # 复制源文件并构建
 COPY .git .git
 COPY docs/ docs/
-RUN npm run docs:build
+RUN npm run build
 
 # ===== 阶段 2：运行 =====
 FROM nginx:alpine
