@@ -38,7 +38,7 @@ sk-codex-xxx         → Codex CLI 专用
 
 确保以下文件不会被提交：
 
-```gitignore
+```txt
 # Claude Code
 .claude/settings.json
 

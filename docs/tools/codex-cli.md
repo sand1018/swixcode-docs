@@ -96,7 +96,7 @@ env_key = "SWIXCODE_API_KEY"
 
 ```bash
 codex \
-  --config model_provider="newapi" \
+  --config model_provider="swixcode" \
   --config model_providers.swixcode.base_url="https://www.swixcode.com/v1" \
   --config model_providers.swixcode.env_key="SWIXCODE_API_KEY" \
   "你的问题"

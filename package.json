@@ -4,11 +4,17 @@
   "type": "module",
   "description": "AI 编程工具连接 New API 网关的配置指南",
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
   },
-  "keywords": ["new-api", "claude-code", "codex-cli", "gemini-cli", "documentation"],
+  "keywords": [
+    "new-api",
+    "claude-code",
+    "codex-cli",
+    "gemini-cli",
+    "documentation"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {

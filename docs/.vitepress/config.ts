@@ -130,7 +130,7 @@ export default defineConfig({
     // --- 页脚 ---
     footer: {
       message: '本文档仅供学习交流，请遵守各 AI 服务商使用条款',
-      copyright: 'Copyright © -2026present SwixCode',
+      copyright: 'Copyright © 2026 SwixCode',
     },
 
 

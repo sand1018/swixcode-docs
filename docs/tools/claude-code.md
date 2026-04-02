@@ -10,25 +10,25 @@ Claude Code 支持两种配置方式：**环境变量** 和 **settings.json**。
 
 ::: code-group
 
-```bash
+```bash [macOS (Zsh)]
 export ANTHROPIC_BASE_URL="https://www.swixcode.com"
 export ANTHROPIC_API_KEY="sk-你的SwixCode令牌"
 claude
 ```
 
-```bash
+```bash [Linux (Bash)]
 export ANTHROPIC_BASE_URL="https://www.swixcode.com"
 export ANTHROPIC_API_KEY="sk-你的SwixCode令牌"
 claude
 ```
 
-```powershell
+```powershell [Windows (PowerShell)]
 $env:ANTHROPIC_BASE_URL = "https://www.swixcode.com"
 $env:ANTHROPIC_API_KEY = "sk-你的SwixCode令牌"
 claude
 ```
 
-```cmd
+```cmd [Windows (CMD)]
 set ANTHROPIC_BASE_URL=https://www.swixcode.com
 set ANTHROPIC_API_KEY=sk-你的SwixCode令牌
 claude
@@ -38,22 +38,23 @@ claude
 
 ::: tip 持久化配置
 将环境变量写入 Shell 配置文件，避免每次手动设置。
+:::
 
 ::: code-group
 
-```bash
+```bash [macOS (Zsh)]
 echo 'export ANTHROPIC_BASE_URL="https://www.swixcode.com"' >> ~/.zshrc
 echo 'export ANTHROPIC_API_KEY="sk-你的SwixCode令牌"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
-```bash
+```bash [Linux (Bash)]
 echo 'export ANTHROPIC_BASE_URL="https://www.swixcode.com"' >> ~/.bashrc
 echo 'export ANTHROPIC_API_KEY="sk-你的SwixCode令牌"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-```powershell
+```powershell [Windows (PowerShell)]
 # 写入用户级环境变量（永久生效）
 [System.Environment]::SetEnvironmentVariable('ANTHROPIC_BASE_URL', 'https://www.swixcode.com', 'User')
 [System.Environment]::SetEnvironmentVariable('ANTHROPIC_API_KEY', 'sk-你的SwixCode令牌', 'User')
@@ -70,7 +71,7 @@ Claude Code 支持通过 JSON 配置文件设置环境变量。
 
 ::: code-group
 
-```json
+```json [macOS / Linux (~/.claude/settings.json)]
 {
   "env": {
     "ANTHROPIC_BASE_URL": "https://www.swixcode.com",
@@ -79,7 +80,7 @@ Claude Code 支持通过 JSON 配置文件设置环境变量。
 }
 ```
 
-```json
+```json [Windows (%USERPROFILE%\.claude\settings.json)]
 {
   "env": {
     "ANTHROPIC_BASE_URL": "https://www.swixcode.com",
