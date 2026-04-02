@@ -15,7 +15,7 @@ AI 编程工具连接 SwixCode 网关的配置指南。
 
 ```bash
 npm install
-npm run docs:dev
+npm run dev
 ```
 
 访问 http://localhost:5173
@@ -23,8 +23,8 @@ npm run docs:dev
 ## 构建
 
 ```bash
-npm run docs:build
-npm run docs:preview
+npm run build
+npm run preview
 ```
 
 ## Docker 部署

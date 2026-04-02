@@ -2,14 +2,14 @@
   "name": "swixcode-docs",
   "version": "1.0.0",
   "type": "module",
-  "description": "AI 编程工具连接 New API 网关的配置指南",
+  "description": "AI 编程工具连接 SwixCode 网关的配置指南",
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs"
   },
   "keywords": [
-    "new-api",
+    "swixcode",
     "claude-code",
     "codex-cli",
     "gemini-cli",
