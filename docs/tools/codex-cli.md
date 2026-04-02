@@ -2,6 +2,27 @@
 
 [Codex CLI](https://github.com/openai/codex) 是 OpenAI 推出的终端 AI 编程助手。它原生支持自定义 Provider，可以轻松接入 SwixCode。
 
+## 安装
+
+::: info 前置要求
+- [Node.js](https://nodejs.org/) **v18** 或更高版本
+- [Git](https://git-scm.com/)（推荐，用于仓库感知功能）
+:::
+
+通过 npm 全局安装：
+
+```bash
+npm install -g @openai/codex
+```
+
+安装完成后，在终端输入 `codex` 即可启动。首次运行会提示认证。
+
+::: tip 更新到最新版
+```bash
+npm install -g @openai/codex@latest
+```
+:::
+
 ## 配置方式
 
 Codex CLI 使用 TOML 配置文件进行配置。

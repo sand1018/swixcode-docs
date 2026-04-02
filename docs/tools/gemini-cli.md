@@ -2,6 +2,35 @@
 
 [Gemini CLI](https://github.com/google-gemini/gemini-cli) 是 Google 推出的终端 AI 编程助手。本文介绍如何配置它通过 SwixCode 网关进行请求。
 
+## 安装
+
+::: info 前置要求
+- [Node.js](https://nodejs.org/) **v20** 或更高版本
+- 支持 macOS、Linux 和 Windows
+:::
+
+### 全局安装（推荐）
+
+```bash
+npm install -g @google/gemini-cli
+```
+
+安装完成后，在终端输入 `gemini` 即可启动。首次运行会提示登录 Google 账号。
+
+### 免安装试用
+
+如果只想快速体验，可以通过 `npx` 直接运行，无需全局安装：
+
+```bash
+npx @google/gemini-cli
+```
+
+::: tip 更新到最新版
+```bash
+npm install -g @google/gemini-cli@latest
+```
+:::
+
 ## 配置方式
 
 ### 方式一：环境变量

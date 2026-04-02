@@ -2,6 +2,45 @@
 
 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) 是 Anthropic 推出的终端 AI 编程助手。本文介绍如何将其配置为使用 SwixCode 转发请求。
 
+## 安装
+
+::: info 前置要求
+- 操作系统：macOS、Linux 或 Windows
+- 使用 SwixCode 网关无需 Anthropic 官方账户，只需 SwixCode 令牌即可
+:::
+
+### 方式一：原生安装器（推荐）
+
+无需 Node.js 依赖，支持自动后台更新。
+
+::: code-group
+
+```bash [macOS / Linux]
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+```powershell [Windows (PowerShell)]
+irm https://claude.ai/install.ps1 | iex
+```
+
+:::
+
+### 方式二：npm 安装
+
+需要 [Node.js](https://nodejs.org/) **v18** 或更高版本。
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+::: tip 更新到最新版
+```bash
+npm install -g @anthropic-ai/claude-code@latest
+```
+:::
+
+安装完成后，在终端输入 `claude` 即可启动。
+
 ## 配置方式
 
 Claude Code 支持两种配置方式：**环境变量** 和 **settings.json**。
